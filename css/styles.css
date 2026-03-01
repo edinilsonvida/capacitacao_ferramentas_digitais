@@ -1,0 +1,36 @@
+/* Configurações Globais */
+body {
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animação do Acordeão */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1500px; /* Altura máxima suficiente para o conteúdo */
+    opacity: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Gradiente de texto */
+.text-gradient {
+    background: linear-gradient(to right, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
